@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+        <h2 class="border-bottom mb-4">Create a Short URL</h2>
+
+        <div class="mb-3">
+			<input class="form-control" type="url" name="original_url" maxlength="200" required id="id_original_url" placeholder="Original Url">
+		</div>
+
+		<div class="mb-3">
+			<input class="form-control" type="text" name="key" maxlength="20" required id="id_key" placeholder="key">
+		</div>
+		<div class="form-group">
+	        <button type="submit" class="btn btn-outline-info">Submit</button>
+    	</div>
+    </div>
+</form>
+{% endblock content %}
